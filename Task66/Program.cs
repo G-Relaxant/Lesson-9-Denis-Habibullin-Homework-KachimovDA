@@ -1,5 +1,5 @@
-﻿// Вариант с рекурсией - не работает :-(
-/*
+﻿// Вариант с рекурсией
+
 Console.Write("Input number M: ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Input number N: ");
@@ -39,7 +39,7 @@ int SumCalculateNbigM(int a, int b, int s)
         a++;
         if(a < b)
         {
-            s = SumCalculateNbigM(m, n, s);
+            s = SumCalculateNbigM(a, b, s);
             return s;
         }
         else
@@ -58,7 +58,7 @@ int SumCalculateMbigN(int a, int b, int s)
         b++;
         if(b < a)
         {
-            s = SumCalculateMbigN(m, n, s);
+            s = SumCalculateMbigN(a, b, s);
             return s;
         }
         else
@@ -68,11 +68,12 @@ int SumCalculateMbigN(int a, int b, int s)
     }
     return s;    
 }
-*/
+
 
 
 
 // Вариант 2
+/*
 Console.Write("Input number M: ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Input number N: ");
@@ -108,3 +109,4 @@ else
         Console.WriteLine($"Sum = {sum}");
     }   
 }
+*/
